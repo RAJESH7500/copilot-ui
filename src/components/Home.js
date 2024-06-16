@@ -3,6 +3,7 @@ import CustomCarousel from './Carousel';
 import { FaPaperPlane, FaMicrophone, FaPlus } from 'react-icons/fa';
 function Home() {
   const [searchtext, setSearchText] = useState(null);
+  const [isSearched, setIsSearched] = useState(false);
   const inputRef = useRef();
   const handleFocus = () => {
     inputRef.current.focus();
@@ -10,29 +11,39 @@ function Home() {
   const handleOnClick = (e) => {
     setSearchText(e.target.innerText.toLowerCase());
     handleFocus();
+    setIsSearched(false);
   };
   const services = ['Research', 'Search', 'summarise', 'generate', 'simplify'];
   return (
     <div>
       <div className="row p-5">
         <div class="col-8">
-          <h1 className="text-center">Copilot</h1>
-          <h3 className="text-center">Your everyday AI campanion</h3>
-          <CustomCarousel setSearchText={setSearchText} />
-          <div className="terms-of-uses">
-            <p>
-              Copilot uses AI. Check for mistakes. <a href="#">Terms</a> |{' '}
-              <a href="#">Privacy</a> | <a href="#">FAQs</a>
-            </p>
-          </div>
+          {!isSearched ? (
+            <>
+              <h1 className="text-center">Copilot</h1>
+              <h3 className="text-center">Your everyday AI campanion</h3>
+              <CustomCarousel setSearchText={setSearchText} />
+              <div className="terms-of-uses">
+                <p>
+                  Copilot uses AI. Check for mistakes. <a href="#">Terms</a> |{' '}
+                  <a href="#">Privacy</a> | <a href="#">FAQs</a>
+                </p>
+              </div>
+            </>
+          ) : (
+            <div className="chat-div">{searchtext}</div>
+          )}
           <div className="input-div" onClick={handleFocus}>
             <input
               type="text"
               placeholder="Ask me anything..."
               className="input-box"
               name="text"
-              value={searchtext}
-              onChange={(e) => setSearchText(e.target.value)}
+              value={!isSearched ? searchtext : ''}
+              onChange={(e) => {
+                setSearchText(e.target.value);
+                setIsSearched(false);
+              }}
               ref={inputRef}
             />
             <div className="button-container">
@@ -43,7 +54,12 @@ function Home() {
               <button className="btn">
                 <FaMicrophone />
               </button>
-              <button className="btn">
+              <button
+                className="btn"
+                onClick={() => {
+                  setIsSearched(true);
+                }}
+              >
                 <FaPaperPlane />
               </button>
             </div>

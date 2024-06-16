@@ -106,6 +106,41 @@
   background: rgb(255, 68, 68) !important;
 }
 
+/* CarouselStyles.css */
+
+.carousel-container {
+  position: relative;
+  overflow: visible;
+}
+
+.carousel-item {
+  transition: transform 0.5s, opacity 0.5s;
+  overflow: hidden;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.custom-arrow-left {
+  left: 50px;
+  font-size: 70px;
+}
+
+.custom-arrow-right {
+  right: 50px;
+  font-size: 70px;
+}
+.chat-div {
+  height: 70vh;
+}
 /* .half-hidden {
   overflow: hidden;
   width: 50%;
