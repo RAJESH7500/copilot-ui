@@ -47,9 +47,12 @@ const cards = [
     title: 'Simplify',
   },
 ];
-const Slider = ({ setSearchText }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
+const Slider = ({
+  setSearchText,
+  setCurrentSlide,
+  currentSlide,
+  carouselRef,
+}) => {
   useEffect(() => {
     setSearchText(cards[(currentSlide + 1) % 5]?.title);
   }, [currentSlide]);
@@ -68,6 +71,7 @@ const Slider = ({ setSearchText }) => {
   return (
     <div className=" mt-3">
       <Carousel
+        ref={carouselRef}
         responsive={responsive}
         autoPlay={false}
         swipeable={true}

@@ -4,16 +4,21 @@ import { FaPaperPlane, FaMicrophone, FaPlus } from 'react-icons/fa';
 function Home() {
   const [searchtext, setSearchText] = useState(null);
   const [isSearched, setIsSearched] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const inputRef = useRef();
+  const carouselRef = useRef(null);
   const handleFocus = () => {
     inputRef.current.focus();
   };
-  const handleOnClick = (e) => {
+
+  const handleOnClick = (e, index) => {
     setSearchText(e.target.innerText.toLowerCase());
     handleFocus();
     setIsSearched(false);
+    carouselRef.current.goToSlide((index - 1 + 5) % 5);
   };
-  const services = ['Research', 'Search', 'summarise', 'generate', 'simplify'];
+
+  const services = ['Research', 'Generate', 'summarise', 'Search', 'simplify'];
   return (
     <div>
       <div className="row p-5">
@@ -22,7 +27,12 @@ function Home() {
             <>
               <h1 className="text-center">Copilot</h1>
               <h3 className="text-center">Your everyday AI campanion</h3>
-              <CustomCarousel setSearchText={setSearchText} />
+              <CustomCarousel
+                setSearchText={setSearchText}
+                currentSlide={currentSlide}
+                setCurrentSlide={setCurrentSlide}
+                carouselRef={carouselRef}
+              />
               <div className="terms-of-uses">
                 <p>
                   Copilot uses AI. Check for mistakes. <a href="#">Terms</a> |{' '}
@@ -73,7 +83,7 @@ function Home() {
               <button
                 type="button"
                 class="btn btn-light mt-3"
-                onClick={handleOnClick}
+                onClick={(e) => handleOnClick(e, index)}
                 key={index}
               >
                 {item}
