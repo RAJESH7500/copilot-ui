@@ -22,7 +22,22 @@ function Home() {
   return (
     <div>
       <div className="row p-5">
-        <div class="col-8">
+        <div class="col-3">
+          <div className="left">
+            <h2>Services</h2>
+            {services.map((item, index) => (
+              <button
+                type="button"
+                class="btn btn-light mt-3"
+                onClick={(e) => handleOnClick(e, index)}
+                key={index}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div class="col-9">
           {!isSearched ? (
             <>
               <h1 className="text-center">Copilot</h1>
@@ -46,7 +61,7 @@ function Home() {
           <div className="input-div" onClick={handleFocus}>
             <input
               type="text"
-              placeholder="Ask me anything..."
+              placeholder="Ask me something about law"
               className="input-box"
               name="text"
               value={!isSearched ? searchtext : ''}
@@ -73,22 +88,6 @@ function Home() {
                 <FaPaperPlane />
               </button>
             </div>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div className="left">
-            <h2>Services</h2>
-            {services.map((item, index) => (
-              <button
-                type="button"
-                class="btn btn-light mt-3"
-                onClick={(e) => handleOnClick(e, index)}
-                key={index}
-              >
-                {item}
-              </button>
-            ))}
           </div>
         </div>
       </div>

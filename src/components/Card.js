@@ -9,7 +9,7 @@ function Card({ image, description }) {
     <div className="card-container">
       <div className="card-image" style={cardImageStyle}></div>
       <div className="card-content">
-        <p className="card-text">{description}</p>
+        <p className="card-text text-center">{description}</p>
       </div>
     </div>
   );

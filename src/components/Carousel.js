@@ -69,7 +69,7 @@ const Slider = ({
   };
 
   return (
-    <div className=" mt-3">
+    <div className="carousel-container">
       <Carousel
         ref={carouselRef}
         responsive={responsive}
