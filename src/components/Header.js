@@ -33,11 +33,6 @@ function Header() {
           </ul>
           <div className="d-flex left-margin">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Try this app
-                </a>
-              </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -56,11 +51,6 @@ function Header() {
                     </a>
                   </li>
                 </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  chats
-                </a>
               </li>
             </ul>
           </div>

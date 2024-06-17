@@ -40,14 +40,23 @@ function Home() {
         <div class="col-9">
           {!isSearched ? (
             <>
-              <h1 className="text-center">Copilot</h1>
+              <h1 className="text-center">
+                <img
+                  src="/images/logoc.jpeg"
+                  alt="logo"
+                  width="50px"
+                  height="50px"
+                />
+              </h1>
               <h3 className="text-center">Your everyday AI campanion</h3>
+
               <CustomCarousel
                 setSearchText={setSearchText}
                 currentSlide={currentSlide}
                 setCurrentSlide={setCurrentSlide}
                 carouselRef={carouselRef}
               />
+
               <div className="terms-of-uses">
                 <p>
                   Copilot uses AI. Check for mistakes. <a href="#">Terms</a> |{' '}

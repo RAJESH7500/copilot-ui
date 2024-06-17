@@ -78,6 +78,7 @@
 
 .scaled {
   transform: scale(1.2);
+  border-radius: 30px;
 }
 
 * {
@@ -123,31 +124,44 @@
 
 .custom-arrow {
   position: absolute;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
-  font-size: 2rem;
   cursor: pointer;
   z-index: 2;
+  border-radius: 50%;
+  border: 1px solid gray;
+  width: 30px;
+  height: 30px;
+  background-color: white;
 }
-
+.custom-arrow > span {
+  font-size: 18px;
+  color: gray;
+}
 .custom-arrow-left {
-  left: 50px;
-  font-size: 70px;
+  left: 5px;
 }
 
 .custom-arrow-right {
-  right: 100px;
-  font-size: 70px;
+  right: 50px;
+}
+
+.arrow {
+  text-size-adjust: 10px;
 }
 .chat-div {
   height: 70vh;
 }
 
 .carousel-container {
-  border: 1px solid black;
+  border: 1px solid gray;
   padding: 10px;
+}
+
+.btn {
+  background: white;
 }
 /* .half-hidden {
   overflow: hidden;

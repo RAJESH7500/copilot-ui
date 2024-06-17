@@ -6,7 +6,7 @@ const CustomLeftArrow = ({ onClick, currentSlide }) => {
       className="custom-arrow custom-arrow-left"
       onClick={() => onClick()}
     >
-      &#8249;
+      <span className="arrow">&lt;</span>
     </button>
   );
 };
@@ -17,7 +17,7 @@ const CustomRightArrow = ({ onClick, currentSlide }) => {
       className="custom-arrow custom-arrow-right"
       onClick={() => onClick()}
     >
-      &#8250;
+      <span> &gt;</span>
     </button>
   );
 };
