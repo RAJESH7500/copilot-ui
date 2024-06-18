@@ -48,7 +48,7 @@ function Home() {
                   height="50px"
                 />
               </h1>
-              <h3 className="text-center">Your everyday AI campanion</h3>
+              <h3 className="text-center">Power Your Practice</h3>
 
               <CustomCarousel
                 setSearchText={setSearchText}
