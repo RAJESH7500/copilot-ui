@@ -91,6 +91,7 @@
   margin: 0 20px;
   overflow: 'hidden';
   padding: 2rem 0;
+  padding-top: 3rem;
 }
 
 .slider img {
@@ -158,6 +159,7 @@
 .carousel-container {
   border: 1px solid gray;
   padding: 10px;
+  border-radius: 10px;
 }
 
 .btn {
