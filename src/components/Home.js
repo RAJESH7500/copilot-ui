@@ -40,14 +40,7 @@ function Home() {
         <div class="col-9">
           {!isSearched ? (
             <>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
+              
                 <h1 className="text-center">
                   <img
                     src="/images/logoc.jpeg"
@@ -57,9 +50,9 @@ function Home() {
                   />
                 </h1>
                 <h3 className="text-center" style={{ marginLeft: '20px' }}>
-                  Power Your Practice
+                 <b>Power Your Practice</b> 
                 </h3>
-              </div>
+           
 
               <CustomCarousel
                 setSearchText={setSearchText}
@@ -70,8 +63,8 @@ function Home() {
 
               <div className="terms-of-uses">
                 <p>
-                  <b>Discalimer: </b>AI-assisted research. Douoble check for
-                  accuracy
+                  <b>Disclaimer: </b>AI-assisted research. Double check for
+                  accuracy.
                 </p>
               </div>
             </>

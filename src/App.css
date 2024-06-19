@@ -47,7 +47,7 @@
   margin-top: 10px;
 }
 .card-container {
-  width: 200px;
+  object-fit: fill;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
