@@ -34,7 +34,7 @@
 .button-container {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 0.1;
   display: flex;
   align-items: space-between;
   justify-content: center;
@@ -46,7 +46,7 @@
   margin-top: 10px;
 }
 .card-container {
-  width: 300px;
+  width: 200px;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
@@ -133,9 +133,11 @@
   z-index: 2;
   border-radius: 50%;
   border: 1px solid gray;
-  width: 30px;
-  height: 30px;
   background-color: white;
+  height: 32px;
+  width: 32px;
+  background-position: 0 0;
+  background-size: 32px 32px;
 }
 .custom-arrow > span {
   font-size: 18px;
@@ -143,10 +145,13 @@
 }
 .custom-arrow-left {
   left: 5px;
+  background-image: url('https://copilot.microsoft.com/rp/ZricD7XDh2XWjN68qgUU8lqqArQ.png');
+  transform: scaleX(-1);
 }
 
 .custom-arrow-right {
-  right: 50px;
+  right: 3px;
+  background-image: url('https://copilot.microsoft.com/rp/ZricD7XDh2XWjN68qgUU8lqqArQ.png');
 }
 
 .arrow {

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card({ image, description }) {
   const cardImageStyle = {
-    height: '350px',
+    height: '250px',
     background: `url(${image}) center/cover no-repeat`,
   };
   return (
