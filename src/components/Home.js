@@ -40,15 +40,26 @@ function Home() {
         <div class="col-9">
           {!isSearched ? (
             <>
-              <h1 className="text-center">
-                <img
-                  src="/images/logoc.jpeg"
-                  alt="logo"
-                  width="50px"
-                  height="50px"
-                />
-              </h1>
-              <h3 className="text-center">Power Your Practice</h3>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <h1 className="text-center">
+                  <img
+                    src="/images/logoc.jpeg"
+                    alt="logo"
+                    width="100px"
+                    height="100px"
+                  />
+                </h1>
+                <h3 className="text-center" style={{ marginLeft: '20px' }}>
+                  Power Your Practice
+                </h3>
+              </div>
 
               <CustomCarousel
                 setSearchText={setSearchText}
@@ -59,8 +70,8 @@ function Home() {
 
               <div className="terms-of-uses">
                 <p>
-                  Copilot uses AI. Check for mistakes. <a href="#">Terms</a> |{' '}
-                  <a href="#">Privacy</a> | <a href="#">FAQs</a>
+                  <b>Discalimer: </b>AI-assisted research. Douoble check for
+                  accuracy
                 </p>
               </div>
             </>

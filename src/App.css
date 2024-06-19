@@ -1,5 +1,6 @@
 * {
   font-family: 'Montserrat';
+  overflow: hidden;
 }
 .input-box {
   width: 100%;
@@ -116,6 +117,8 @@
 .carousel-container {
   position: relative;
   overflow: visible;
+  width: 818px;
+  margin-left: 200px;
 }
 
 .carousel-item {
@@ -150,7 +153,7 @@
 }
 
 .custom-arrow-right {
-  right: 3px;
+  right: 35px;
   background-image: url('https://copilot.microsoft.com/rp/ZricD7XDh2XWjN68qgUU8lqqArQ.png');
 }
 
@@ -169,6 +172,10 @@
 
 .btn {
   background: white;
+}
+
+.color-white {
+  background-color: white;
 }
 /* .half-hidden {
   overflow: hidden;

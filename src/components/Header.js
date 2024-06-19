@@ -2,10 +2,15 @@ import React from 'react';
 
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg color-white">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img src="/images/logoc.jpeg" alt="logo" width="50px" height="50px" />
+          <img
+            src="/images/iimage.jpeg"
+            alt="logo"
+            width="120px"
+            height="120px"
+          />
         </a>
         <button
           className="navbar-toggler"
@@ -19,18 +24,6 @@ function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                COPILOT
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                NOTEBOOK
-              </a>
-            </li>
-          </ul>
           <div className="d-flex left-margin">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item dropdown">
