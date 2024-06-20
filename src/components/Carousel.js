@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { CustomLeftArrow, CustomRightArrow } from './CustomArrows';
@@ -22,23 +22,21 @@ const responsive = {
 };
 const cards = [
   {
-    cover:
-      '/images/discover.png',
+    cover: '/images/discover.png',
     title: 'Discover',
   },
   {
-    cover:
-    '/images/generate.png',title: 'Generate',
+    cover: '/images/generate.png',
+    title: 'Generate',
   },
   {
-    cover:
-    '/images/summarize.png',title: 'Summarize',
+    cover: '/images/summarize.png',
+    title: 'Summarize',
   },
   {
-    cover:
-      '/images/search.png', title: 'Search',
+    cover: '/images/search.png',
+    title: 'Search',
   },
-
 ];
 const Slider = ({
   setSearchText,

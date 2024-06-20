@@ -12,13 +12,14 @@
 }
 
 .input-div {
-  width: 70vw;
+  width: 80%;
   height: 100px;
   border: 2px solid black;
   border-radius: 20px;
   margin-top: 20px;
   position: relative;
   cursor: text;
+  margin: auto;
 }
 
 .right-marigin {
@@ -118,11 +119,10 @@
   position: relative;
   overflow: visible;
   width: 818px;
-  margin-left: 200px;
 }
 
 .carousel-item {
-  transition: transform 0.5s, opacity 0.5s;
+  transition: all 0.1s;
   overflow: hidden;
 }
 
@@ -153,7 +153,7 @@
 }
 
 .custom-arrow-right {
-  right: 35px;
+  right: 5px;
   background-image: url('https://copilot.microsoft.com/rp/ZricD7XDh2XWjN68qgUU8lqqArQ.png');
 }
 
@@ -168,6 +168,7 @@
   border: 1px solid gray;
   padding: 10px;
   border-radius: 10px;
+  margin: auto;
 }
 
 .btn {
@@ -176,6 +177,12 @@
 
 .color-white {
   background-color: white;
+}
+
+.center {
+  margin: auto;
+  width: 80%;
+  padding: 10px;
 }
 /* .half-hidden {
   overflow: hidden;
